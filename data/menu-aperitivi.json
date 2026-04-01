@@ -1,0 +1,164 @@
+{
+  "categories": [
+    {
+      "id": "signature",
+      "label": "Signature Cocktails",
+      "items": [
+        {
+          "name": "Tramonto Adriatico",
+          "description": "Aperol, rum bianco, succo di pompelmo rosso, sciroppo di ibisco, prosecco, sale marino affumicato",
+          "price": "14"
+        },
+        {
+          "name": "Duna Bianca",
+          "description": "gin botanico mediterraneo, lychee, acqua di rose, lime, Fever-Tree tonic, fiore di sambuco",
+          "price": "14"
+        },
+        {
+          "name": "Pineta di Ravenna",
+          "description": "vodka, cetriolo, basilico, sciroppo al rosmarino, lime, soda, germogli freschi",
+          "price": "13"
+        },
+        {
+          "name": "Oro dell'Adriatico",
+          "description": "bourbon americano, miele di acacia romagnola, limone, zafferano, ginger beer artigianale",
+          "price": "15"
+        },
+        {
+          "name": "Onda di Giugno",
+          "description": "tequila reposado, acqua di cocco, lime, sciroppo di agave, soda al limone, peperoncino rosa",
+          "price": "13"
+        }
+      ]
+    },
+    {
+      "id": "classici",
+      "label": "Classici",
+      "items": [
+        {
+          "name": "Aperol Spritz",
+          "description": "Aperol, prosecco DOC Valdobbiadene, soda, fetta d'arancia",
+          "price": "10"
+        },
+        {
+          "name": "Negroni",
+          "description": "gin London Dry, Campari, vermouth rosso Carpano Antica Formula, scorza d'arancia",
+          "price": "12"
+        },
+        {
+          "name": "Hugo",
+          "description": "prosecco, sciroppo di fiori di sambuco, menta fresca, lime, soda",
+          "price": "10"
+        },
+        {
+          "name": "Mojito Classico",
+          "description": "rum bianco Havana 3, menta fresca, lime, zucchero di canna grezzo, soda",
+          "price": "11"
+        },
+        {
+          "name": "Bellini",
+          "description": "prosecco Extra Dry, purea di pesca bianca di Romagna, tocco di limone",
+          "price": "10"
+        },
+        {
+          "name": "Gin & Tonic Premium",
+          "description": "gin selezionato dal bar, acqua tonica Fever-Tree Indian, agrumi freschi, erbe aromatiche",
+          "price": "13"
+        }
+      ]
+    },
+    {
+      "id": "analcolici",
+      "label": "Analcolici",
+      "items": [
+        {
+          "name": "Limonata di Cervia",
+          "description": "limoni siciliani, menta fresca, sale di Cervia, zucchero di canna, acqua frizzante",
+          "price": "7"
+        },
+        {
+          "name": "Virgin Tramonto",
+          "description": "succo di melograno, succo di arancia rossa, sciroppo di ibisco, soda, lime, fetta d'arancia",
+          "price": "8"
+        },
+        {
+          "name": "Frullato dell'Orto",
+          "description": "frutta fresca di stagione, latte di mandorla artigianale, miele di acacia, cubetti di ghiaccio",
+          "price": "8"
+        },
+        {
+          "name": "Acqua di Cetriolo e Menta",
+          "description": "acqua frizzante premium, cetriolo, menta, lime, zenzero, zucchero di canna",
+          "price": "7"
+        }
+      ]
+    },
+    {
+      "id": "vini",
+      "label": "Vini al Calice",
+      "items": [
+        {
+          "name": "Albana Secca di Romagna",
+          "description": "DOCG — floreale, note di pesca bianca e mandorla, acidità elegante, finale minerale",
+          "price": "8"
+        },
+        {
+          "name": "Pignoletto Frizzante",
+          "description": "DOC Colli Bolognesi — fresco, agrumato, bollicine fini, ideale con i fritti",
+          "price": "7"
+        },
+        {
+          "name": "Trebbiano di Romagna",
+          "description": "DOC — pulito, verticale, leggero con note floreali, ottimo con il pesce crudo",
+          "price": "7"
+        },
+        {
+          "name": "Sangiovese Rosato",
+          "description": "DOC Romagna — secco, lampone, melograno, fresco, struttura leggera, colore cerasuolo",
+          "price": "8"
+        },
+        {
+          "name": "Pagadebit di Romagna",
+          "description": "DOC — delicato, floreale, note di pera e pesca, bassa acidità, fresco e persistente",
+          "price": "8"
+        },
+        {
+          "name": "Prosecco Superiore",
+          "description": "DOCG Valdobbiadene Rive — perlage fine, pesca bianca, fiori d'acacia, finale secco",
+          "price": "9"
+        }
+      ]
+    },
+    {
+      "id": "sfizi",
+      "label": "Sfizi da Aperitivo",
+      "items": [
+        {
+          "name": "Tagliere Romagnolo",
+          "description": "salumi tipici (squacquerone, lonza, salame romagnolo), piadina fritta, tigelle, mostarda di fichi",
+          "price": "18"
+        },
+        {
+          "name": "Bruschette della Casa",
+          "description": "tre varianti: pomodoro e basilico, crema di ricotta e alici, stracciatella e datterini confit",
+          "price": "10"
+        },
+        {
+          "name": "Olive all'Ascolana Artigianali",
+          "description": "olive tenera ascolana DOP ripiene di carne, fritte, salsa al limone, sale di Cervia",
+          "price": "9"
+        },
+        {
+          "name": "Crostini al Salmone Selvaggio",
+          "description": "pan brioche tostato, salmone selvaggio dell'Alaska affumicato, crème fraîche, capperi, erba cipollina",
+          "price": "12"
+        },
+        {
+          "name": "Chips di Polenta con Baccalà Mantecato",
+          "description": "polenta croccante, baccalà mantecato alla veneziana, prezzemolo, pepe bianco, olio nuovo",
+          "price": "11"
+        }
+      ]
+    }
+  ]
+}

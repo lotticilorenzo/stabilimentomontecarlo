@@ -1,0 +1,194 @@
+{
+  "categories": [
+    {
+      "id": "antipasti",
+      "label": "Antipasti",
+      "items": [
+        {
+          "name": "Carpaccio di Branzino",
+          "description": "branzino crudo, limone Meyer, capperi di Pantelleria, fiori edibili, olio extravergine del Garda",
+          "price": "16"
+        },
+        {
+          "name": "Frittura di Paranza",
+          "description": "pesciolini dell'Adriatico, bianchetti, mazzancolle baby, maionese al limone, sale di Cervia",
+          "price": "18"
+        },
+        {
+          "name": "Insalata di Mare Tiepida",
+          "description": "polpo, seppie, gamberi rosa, vongole veraci, sedano, limone, olio aromatico alle erbe",
+          "price": "20"
+        },
+        {
+          "name": "Polpo alla Brace",
+          "description": "polpo verace grigliato, crema di patate affumicata, paprika dolce, prezzemolo, olio nuovo",
+          "price": "22"
+        },
+        {
+          "name": "Tartare di Tonno Rosso",
+          "description": "tonno pinna gialla, avocado, sesamo nero tostato, zenzero fresco, emulsione di soia e lime",
+          "price": "20"
+        },
+        {
+          "name": "Cozze alla Marinara",
+          "description": "cozze dell'Adriatico, pomodorini Pachino, aglio, prezzemolo, vino bianco, crostini al burro",
+          "price": "15"
+        },
+        {
+          "name": "Gamberi Rossi Crudi",
+          "description": "gamberi rossi di Sicilia, fleur de sel, olio extravergine, scorza di limone, pepe di Sichuan",
+          "price": "24"
+        }
+      ]
+    },
+    {
+      "id": "primi",
+      "label": "Primi",
+      "items": [
+        {
+          "name": "Spaghetti alle Vongole",
+          "description": "vongole veraci dell'Adriatico, aglio, peperoncino, prezzemolo, vino bianco Trebbiano",
+          "price": "20"
+        },
+        {
+          "name": "Tagliolini all'Astice",
+          "description": "astice vivo, pomodorini datterini, basilico, aglio, olio di frantoio DOP",
+          "price": "36"
+        },
+        {
+          "name": "Risotto ai Frutti di Mare",
+          "description": "cozze, vongole, scampi, calamari, bisque di crostacei, fumetto, mantecato al burro d'Isigny",
+          "price": "26"
+        },
+        {
+          "name": "Paccheri con Ricciola e Bottarga",
+          "description": "ricciola fresca, pomodoro giallo, olive taggiasche, bottarga di muggine grattugiata, rucola",
+          "price": "24"
+        },
+        {
+          "name": "Zuppa di Pesce Adriatica",
+          "description": "scorfano, coda di rospo, mazzancolle, vongole, pomodoro, crostini all'aglio arrostito",
+          "price": "26"
+        },
+        {
+          "name": "Risotto allo Zafferano e Scampi",
+          "description": "riso Carnaroli, scampi dell'Adriatico, zafferano di Navelli, scorza di limone, parmigiano 24 mesi",
+          "price": "28"
+        },
+        {
+          "name": "Linguine al Granchio Blu",
+          "description": "granchio blu dell'Adriatico, pomodoro fresco, aglio, erba cipollina, peperoncino, vino bianco",
+          "price": "22"
+        }
+      ]
+    },
+    {
+      "id": "secondi",
+      "label": "Secondi",
+      "items": [
+        {
+          "name": "Branzino al Sale di Cervia",
+          "description": "branzino intero, sale integrale di Cervia, timo limonato, rosmarino, olio al limone",
+          "price": "34"
+        },
+        {
+          "name": "Frittura Mista dell'Adriatico",
+          "description": "calamari, mazzancolle, sogliola, zucchine, fiori di zucca, maionese al limone",
+          "price": "30"
+        },
+        {
+          "name": "Rombo al Forno con Patate",
+          "description": "rombo chiodato, patate novelle, pomodorini, origano, olio extravergine, vino bianco",
+          "price": "38"
+        },
+        {
+          "name": "Grigliata Mista di Pesce",
+          "description": "branzino, orata, scampi, calamaro, verdure estive grigliate, salmoriglio",
+          "price": "40"
+        },
+        {
+          "name": "Orata in Acqua Pazza",
+          "description": "orata fresca, pomodorini di Piennolo, olive di Gaeta, capperi, prezzemolo, brodo di pesce",
+          "price": "30"
+        },
+        {
+          "name": "Scampi alla Busara",
+          "description": "scampi interi, pomodoro fresco, aglio, vino bianco, pangrattato tostato, prezzemolo",
+          "price": "36"
+        },
+        {
+          "name": "Sogliola al Burro e Salvia",
+          "description": "sogliola dell'Adriatico, burro di qualità, salvia fresca, limone, fondo di cottura",
+          "price": "28"
+        }
+      ]
+    },
+    {
+      "id": "contorni",
+      "label": "Contorni",
+      "items": [
+        {
+          "name": "Insalata Estiva di Campo",
+          "description": "misticanza locale, pomodorini ciliegino, cetriolo, cipolla rossa di Tropea, basilico fresco",
+          "price": "7"
+        },
+        {
+          "name": "Patate al Forno con Rosmarino",
+          "description": "patate novelle, rosmarino fresco, aglio in camicia, olio extravergine, sale di Cervia",
+          "price": "7"
+        },
+        {
+          "name": "Verdure Grigliate di Stagione",
+          "description": "zucchine, melanzane, peperoni, pomodori, erbe aromatiche mediterranee, olio nuovo",
+          "price": "8"
+        },
+        {
+          "name": "Pomodori alla Romagnola",
+          "description": "pomodori cuore di bue, aglio, origano di montagna, olio extravergine, sale",
+          "price": "7"
+        },
+        {
+          "name": "Fagiolini con Mandorle e Limone",
+          "description": "fagiolini fini saltati, mandorle tostate, scorza di limone, olio al peperoncino",
+          "price": "8"
+        }
+      ]
+    },
+    {
+      "id": "dolci",
+      "label": "Dolci",
+      "items": [
+        {
+          "name": "Tiramisù della Casa",
+          "description": "savoiardi, mascarpone fresco, espresso ristretto, marsala secco, cacao amaro di qualità",
+          "price": "9"
+        },
+        {
+          "name": "Panna Cotta alla Vaniglia",
+          "description": "panna cotta con bacca di vaniglia Bourbon, coulis di lamponi, ribes fresco",
+          "price": "8"
+        },
+        {
+          "name": "Semifreddo al Limone e Pistacchio",
+          "description": "semifreddo al limone di Amalfi IGP, granella di pistacchio di Bronte DOP, menta fresca",
+          "price": "9"
+        },
+        {
+          "name": "Gelato Artigianale",
+          "description": "tre gusti a scelta tra produzione giornaliera, cialda croccante, panna montata al momento",
+          "price": "7"
+        },
+        {
+          "name": "Crostatina di Frutta Fresca",
+          "description": "pasta frolla burro, crema pasticcera alla vaniglia, frutta di stagione, gelatina neutra",
+          "price": "8"
+        },
+        {
+          "name": "Sorbetto all'Anguria e Basilico",
+          "description": "sorbetto artigianale, anguria di Romagna, basilico genovese, fiocchi di sale, pepe rosa",
+          "price": "7"
+        }
+      ]
+    }
+  ]
+}

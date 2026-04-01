@@ -1,0 +1,116 @@
+{
+  "intro": "Impasto a lenta lievitazione 48 ore con prefermento, farina tipo 1 macinata a pietra, pomodoro San Marzano DOP, fior di latte dell'Appennino campano. Cottura in forno a legna di quercia.",
+  "categories": [
+    {
+      "id": "classiche",
+      "label": "Classiche",
+      "items": [
+        {
+          "name": "Margherita",
+          "description": "pomodoro San Marzano DOP, fior di latte, foglie di basilico fresco, olio extravergine di oliva",
+          "price": "10"
+        },
+        {
+          "name": "Marinara",
+          "description": "pomodoro San Marzano, aglio in camicia, origano di montagna, olio extravergine — senza latticini",
+          "price": "8"
+        },
+        {
+          "name": "Capricciosa",
+          "description": "fior di latte, prosciutto cotto di qualità, funghi champignon, carciofini sott'olio, olive nere, uovo",
+          "price": "14"
+        },
+        {
+          "name": "Diavola",
+          "description": "fior di latte, salame piccante artigianale, olive nere di Gaeta, peperoncino fresco, origano",
+          "price": "13"
+        },
+        {
+          "name": "Prosciutto Crudo e Rucola",
+          "description": "fior di latte, prosciutto crudo 18 mesi, rucola fresca, scaglie di Grana Padano, pomodorini",
+          "price": "15"
+        },
+        {
+          "name": "Quattro Formaggi",
+          "description": "fior di latte, gorgonzola dolce, provola affumicata, pecorino stagionato, miele di castagno a filo",
+          "price": "15"
+        }
+      ]
+    },
+    {
+      "id": "gourmet",
+      "label": "Gourmet",
+      "items": [
+        {
+          "name": "Montecarlo",
+          "description": "base bianca, stracciatella di bufala, gamberi crudi marinati al lime, rucola, bottarga di muggine grattugiata",
+          "price": "22",
+          "badge": "signature"
+        },
+        {
+          "name": "Adriatica",
+          "description": "pomodoro San Marzano, fior di latte, alici dell'Adriatico, olive taggiasche, capperi di Pantelleria, scorza di limone",
+          "price": "18"
+        },
+        {
+          "name": "Burrata e Crudo di Parma",
+          "description": "pomodorini confit, burrata fresca pugliese, prosciutto crudo di Parma 24 mesi, rucola, aceto balsamico di Modena IGP",
+          "price": "21"
+        },
+        {
+          "name": "Porcini e Tartufo Nero",
+          "description": "base bianca, fior di latte, porcini trifolati al timo, speck dell'Alto Adige, crema di tartufo nero pregiato",
+          "price": "22",
+          "badge": "del giorno"
+        },
+        {
+          "name": "Bresaola e Caprino",
+          "description": "base bianca, caprino fresco del Montefeltro, bresaola della Valtellina IGP, rucola, pinoli tostati, limone",
+          "price": "19"
+        }
+      ]
+    },
+    {
+      "id": "bianche",
+      "label": "Bianche",
+      "items": [
+        {
+          "name": "Bianca al Rosmarino",
+          "description": "fior di latte, ricotta vaccina fresca, aglio, rosmarino fresco, olio extravergine, sale di Cervia",
+          "price": "12"
+        },
+        {
+          "name": "Patate, Pancetta e Scamorza",
+          "description": "patate in fette sottili, scamorza affumicata, pancetta tesa croccante, cipolla rossa caramellata, timo",
+          "price": "14"
+        },
+        {
+          "name": "Fiori di Zucca e Stracciatella",
+          "description": "stracciatella di bufala fresca, fiori di zucca, zucchine grigliate, menta, olio al basilico, alici facoltative",
+          "price": "16"
+        }
+      ]
+    },
+    {
+      "id": "bambini",
+      "label": "Per i Piccoli",
+      "items": [
+        {
+          "name": "Margheritina",
+          "description": "pomodoro, fior di latte, basilico — formato ridotto, bordo alto morbido",
+          "price": "7"
+        },
+        {
+          "name": "Prosciuttina",
+          "description": "fior di latte, prosciutto cotto di qualità — formato ridotto",
+          "price": "8"
+        },
+        {
+          "name": "Wurstel e Patatine",
+          "description": "fior di latte, wurstel di suino, servita con patatine fritte croccanti — formato ridotto",
+          "price": "9"
+        }
+      ]
+    }
+  ]
+}

@@ -34,3 +34,8 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Ensure ALL environment variables are ignored for security
+.env
+.env.*
+!.env.example
