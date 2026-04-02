@@ -206,6 +206,11 @@ export default function Navbar() {
   const navBg = scrolled ? 'rgba(245, 237, 216, 0.92)' : 'transparent'
   const navBackdrop = scrolled ? 'blur(16px)' : 'none'
 
+  // ── Banner offset — banner height matches SeasonBanner py-2.5 + content ──
+  // When banner is visible and page is at top, slide navbar below it
+  const BANNER_HEIGHT = 40 // px
+  const navTop = bannerVisible && !scrolled ? BANNER_HEIGHT : 0
+
   // ── Animation Variants ──────────────────────────────────────────────────
 
   const transitionExpo = { duration: 0.7, ease: [0.16, 1, 0.3, 1] }
@@ -240,12 +245,12 @@ export default function Navbar() {
     <>
       {/* ── Main Navbar ───────────────────────────────────────────────────── */}
       <nav
-        className={`${scrolled ? 'fixed' : 'absolute'} left-0 right-0 z-50 transition-all duration-500`}
-        style={{ 
-          top: scrolled ? '0px' : '0px',
-          backgroundColor: navBg, 
-          backdropFilter: navBackdrop, 
-          height: scrolled ? '70px' : '90px'
+        className="fixed left-0 right-0 z-50 transition-all duration-500"
+        style={{
+          top: navTop,
+          backgroundColor: navBg,
+          backdropFilter: navBackdrop,
+          height: scrolled ? '70px' : '90px',
         }}
       >
         <div className="max-w-7xl mx-auto px-6 lg:px-12 h-full flex items-center justify-between">

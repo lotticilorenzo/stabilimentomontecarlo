@@ -1,6 +1,6 @@
 'use client'
 
-import { useRef } from 'react'
+import { useRef, useEffect } from 'react'
 import { motion, useScroll, useTransform } from 'framer-motion'
 import Link from 'next/link'
 import ScrollIndicator from '@/components/ui/ScrollIndicator'
@@ -29,10 +29,15 @@ const itemVariants = {
   },
 }
 
+// Poster / fallback (stesso URL dell'immagine di riserva)
+const FALLBACK_SRC =
+  'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1920&q=90&auto=format&fit=crop'
+
 // ─── Component ────────────────────────────────────────────────────────────────
 
 export default function HeroSection() {
   const sectionRef = useRef<HTMLElement>(null)
+  const videoRef = useRef<HTMLVideoElement>(null)
 
   // Parallax: track scroll relative to the section
   const { scrollYProgress } = useScroll({
@@ -40,8 +45,44 @@ export default function HeroSection() {
     offset: ['start start', 'end start'],
   })
 
-  // Image moves up at 0.5× the scroll speed — creates depth
+  // Image/video container moves up at 0.3× the scroll speed
   const parallaxY = useTransform(scrollYProgress, [0, 1], ['0%', '30%'])
+
+  // ── Video play / pause management ────────────────────────────────────────
+  useEffect(() => {
+    const video = videoRef.current
+    if (!video) return
+
+    // Attempt play; catch DOMException on autoplay-blocked browsers
+    const tryPlay = () => {
+      video.play().catch(() => {
+        // Autoplay blocked — add event listener to retry on first user gesture
+        const retry = () => {
+          video.play().catch(() => {})
+          window.removeEventListener('pointerdown', retry)
+          window.removeEventListener('keydown', retry)
+        }
+        window.addEventListener('pointerdown', retry, { once: true })
+        window.addEventListener('keydown', retry, { once: true })
+      })
+    }
+
+    // Pause when hero scrolls out of view (saves CPU/GPU on scroll-heavy pages)
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) tryPlay()
+        else video.pause()
+      },
+      { threshold: 0.1 }
+    )
+
+    observer.observe(video)
+    tryPlay() // attempt immediately on mount
+
+    return () => {
+      observer.disconnect()
+    }
+  }, [])
 
   return (
     <section
@@ -49,52 +90,56 @@ export default function HeroSection() {
       className="relative h-dvh min-h-[600px] overflow-hidden"
     >
 
-      {/* ── Background fallback / Video placeholder ────────────────────── */}
+      {/* ── Background layer — parallax wrapper ───────────────────────── */}
       {/*
-        Rimossa immagine statica per inserire un <video> loop, come richiesto.
-        Basta aggiornare il `src` con l'indirizzo del video finale.
+        Note: the parallax motion.div has NO scale animation.
+        Animating scale on a video element is extremely expensive
+        (forces GPU to re-composite the video texture every frame).
+        The fallback image gets the Ken Burns treatment; the video plays as-is.
       */}
       <motion.div
-        className="absolute -top-[10%] -bottom-[10%] left-0 right-0 bg-dark"
+        className="absolute -top-[10%] -bottom-[10%] left-0 right-0"
         style={{ y: parallaxY }}
         aria-hidden="true"
-        data-cursor="sea"
       >
+        {/* Fallback image: Ken Burns scale only applies to this layer.
+            Sits behind the video — visible when video is loading or unsupported. */}
         <motion.div
-          className="absolute inset-0"
+          className="absolute inset-0 bg-cover bg-center bg-dark"
+          style={{ backgroundImage: `url('${FALLBACK_SRC}')` }}
           initial={{ scale: 1 }}
-          animate={{ scale: 1.05 }}
+          animate={{ scale: 1.06 }}
           transition={{
-            duration: 10,
-            ease: 'linear',
+            duration: 14,
+            ease: 'easeInOut',
             repeat: Infinity,
             repeatType: 'reverse',
           }}
-        >
-          {/* Static fallback image underneath the video just in case */}
-          <div 
-            className="absolute inset-0 bg-cover bg-center" 
-            style={{ backgroundImage: "url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1920&q=90&auto=format&fit=crop')" }} 
-          />
+        />
 
-          <video
-            autoPlay
-            loop
-            muted
-            playsInline
-            className="absolute inset-0 w-full h-full object-cover object-center"
-            style={{ filter: 'brightness(0.95)' }}
-          >
-            <source src="/videos/mare-loop.mp4" type="video/mp4" />
-          </video>
-        </motion.div>
+        {/* Video: fills the parallax container, NO extra scale transform.
+            preload="auto" starts buffering as soon as the component mounts.
+            poster shows the first frame instantly while the video loads. */}
+        <video
+          ref={videoRef}
+          loop
+          muted
+          playsInline
+          preload="auto"
+          poster={FALLBACK_SRC}
+          className="absolute inset-0 w-full h-full object-cover object-center"
+          style={{ willChange: 'transform' }}
+        >
+          <source src="/videos/mare-loop.mp4" type="video/mp4" />
+        </video>
       </motion.div>
 
-      {/* ── Gradient overlay potenziato per una perfetta leggibilità ── */}
+      {/* ── Gradient overlay ──────────────────────────────────────────── */}
       <div
         className="absolute inset-0"
         style={{
-          background: 'linear-gradient(to bottom, rgba(26,26,24,0.65) 0%, rgba(26,26,24,0.3) 40%, rgba(26,26,24,0.85) 100%)',
+          background:
+            'linear-gradient(to bottom, rgba(26,26,24,0.65) 0%, rgba(26,26,24,0.3) 40%, rgba(26,26,24,0.85) 100%)',
         }}
         aria-hidden="true"
       />
@@ -116,7 +161,7 @@ export default function HeroSection() {
           </span>
         </motion.div>
 
-        {/* 2 — H1 with fluid clamp size */}
+        {/* 2 — H1 */}
         <motion.h1
           variants={itemVariants}
           className="font-cormorant font-light italic leading-[0.9] mb-7 text-cream"

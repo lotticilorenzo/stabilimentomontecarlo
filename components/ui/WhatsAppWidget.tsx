@@ -76,7 +76,7 @@ export default function WhatsAppWidget() {
   const toggleOpen = () => setIsOpen((prev) => !prev)
 
   return (
-    <div className="fixed bottom-[calc(88px+env(safe-area-inset-bottom))] lg:bottom-6 right-6 z-50 flex flex-col items-end" ref={menuRef}>
+    <div className="whatsapp-widget fixed right-6 z-50 flex flex-col items-end" ref={menuRef}>
       
       {/* ── Guided Options Menu ── */}
       <AnimatePresence>

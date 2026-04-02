@@ -1,30 +1,24 @@
 'use client'
 
 import { usePathname } from 'next/navigation'
-import { AnimatePresence, motion } from 'framer-motion'
+import { motion } from 'framer-motion'
 
 /**
- * PageTransition
- * Wrap children in AnimatePresence keyed on the current pathname.
- * – fade out 300ms on exit
- * – fade in 300ms + slide up (y 20→0) on enter
+ * PageTransition — fade veloce (180ms) senza y-offset.
+ * Il y-offset precedente (y: 20→0) aggiungeva 400ms di latenza percepita
+ * e conflictava con Lenis che ristabilisce la posizione scroll indipendentemente.
  */
 export default function PageTransition({ children }: { children: React.ReactNode }) {
   const pathname = usePathname()
 
   return (
-    <>
-      <motion.div
-        key={pathname}
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{
-          duration: 0.4,
-          ease: [0.22, 1, 0.36, 1],
-        }}
-      >
-        {children}
-      </motion.div>
-    </>
+    <motion.div
+      key={pathname}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.18, ease: 'easeOut' }}
+    >
+      {children}
+    </motion.div>
   )
 }

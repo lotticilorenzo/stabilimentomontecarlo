@@ -5,13 +5,12 @@ import Footer from '@/components/layout/Footer'
 import CustomCursor from '@/components/ui/CustomCursor'
 import GrainOverlay from '@/components/ui/GrainOverlay'
 import PageTransition from '@/components/ui/PageTransition'
-import ScrollToTop from '@/components/ui/ScrollToTop'
 import ScrollProgressBar from '@/components/ui/ScrollProgressBar'
-import ScrollToTopButton from '@/components/ui/ScrollToTopButton'
 import SmoothScroll from '@/components/ui/SmoothScroll'
 import SeasonBanner from '@/components/layout/SeasonBanner'
 import StickyCallButton from '@/components/ui/StickyCallButton'
 import WhatsAppWidget from '@/components/ui/WhatsAppWidget'
+import ChunkErrorRecovery from '@/components/ui/ChunkErrorRecovery'
 
 import LocalBusinessJsonLd from '@/components/seo/LocalBusinessJsonLd'
 import RestaurantJsonLd from '@/components/seo/RestaurantJsonLd'
@@ -69,31 +68,27 @@ export default function RootLayout({
   return (
     <html lang="it">
       <head>
-        {/* ─── Font preconnect ─────────────────────────────────────────── */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        {/* ─── Structured Data ──────────────────────────────────────────── */}
         <LocalBusinessJsonLd />
         <RestaurantJsonLd />
       </head>
       <body>
-        <SmoothScroll />
+        {/* Utilità globali — nessun output visivo */}
+        <ChunkErrorRecovery />
+        <SmoothScroll />       {/* gestisce anche il reset scroll su navigazione */}
         <GrainOverlay />
         <CustomCursor />
         <ScrollProgressBar />
-        <ScrollToTop />
+
+        {/* Layout visibile */}
         <SeasonBanner />
-        {/* Anchor point che si posiziona sempre esattamente sotto al SeasonBanner.
-            Avendo h-0, non spinge il resto del contenuto giù, ma fa da 'relative' per la Navbar 'absolute'. */}
-        <div className="relative w-full z-50" style={{ height: 0 }}>
-          <Navbar />
-        </div>
+        <Navbar />
         <main>
           <PageTransition>
             {children}
           </PageTransition>
         </main>
-        <ScrollToTopButton />
         <StickyCallButton />
         <WhatsAppWidget />
         <Footer />

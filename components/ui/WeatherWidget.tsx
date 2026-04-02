@@ -99,12 +99,16 @@ export default function WeatherWidget() {
   const [weather, setWeather] = useState<WeatherData | null>(null)
 
   useEffect(() => {
+    const controller = new AbortController()
+    const { signal } = controller
+
     async function fetchWeather() {
       // ── Primario: wttr.in ──
       try {
-        const res = await fetch('https://wttr.in/Ravenna?format=j1', { signal: AbortSignal.timeout(4000) })
+        const res = await fetch('https://wttr.in/Ravenna?format=j1', { signal })
         if (!res.ok) throw new Error('wttr.in fail')
         const data = await res.json()
+        if (signal.aborted) return
         const c = data.current_condition[0]
         const desc: string = c.weatherDesc?.[0]?.value ?? ''
         const italianDesc: string = c.lang_it?.[0]?.value ?? desc
@@ -115,17 +119,18 @@ export default function WeatherWidget() {
         })
         return
       } catch {
-        // fallback
+        if (signal.aborted) return // component unmounted — ignora
       }
 
       // ── Fallback: OpenMeteo ─────────────────────────────────────────────
       try {
         const res = await fetch(
           'https://api.open-meteo.com/v1/forecast?latitude=44.42&longitude=12.20&current=temperature_2m,weathercode&timezone=Europe/Rome',
-          { signal: AbortSignal.timeout(5000) }
+          { signal }
         )
         if (!res.ok) throw new Error('OpenMeteo fail')
         const data = await res.json()
+        if (signal.aborted) return
         const code: number = data.current.weathercode
         const temp: number = Math.round(data.current.temperature_2m)
         setWeather({
@@ -137,7 +142,12 @@ export default function WeatherWidget() {
         // lascia il widget invisibile — non bloccare il layout
       }
     }
+
     fetchWeather()
+
+    return () => {
+      controller.abort() // cancella le fetch se il componente smonta
+    }
   }, [])
 
   if (!weather) return null
