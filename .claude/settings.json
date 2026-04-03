@@ -9,7 +9,9 @@
       "Bash(npm install:*)",
       "Bash(cp README.md next-env.d.ts next.config.mjs package.json postcss.config.mjs tailwind.config.ts tsconfig.json c:/Users/lotti/Desktop/giammariafrigo/)",
       "Bash(cp -r app c:/Users/lotti/Desktop/giammariafrigo/)",
-      "Bash(npm run:*)"
+      "Bash(npm run:*)",
+      "Bash(taskkill /F /IM node.exe)",
+      "Read(//c/Users/lotti/AppData/Local/Temp/claude/c--Users-lotti-Desktop/giammariafrigo/598f0980-1a1e-41d4-8d6a-b1558cfbd5eb/tasks/**)"
     ]
   }
 }

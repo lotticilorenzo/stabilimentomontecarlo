@@ -7,7 +7,6 @@ import GrainOverlay from '@/components/ui/GrainOverlay'
 import PageTransition from '@/components/ui/PageTransition'
 import ScrollProgressBar from '@/components/ui/ScrollProgressBar'
 import SmoothScroll from '@/components/ui/SmoothScroll'
-import SeasonBanner from '@/components/layout/SeasonBanner'
 import StickyCallButton from '@/components/ui/StickyCallButton'
 import WhatsAppWidget from '@/components/ui/WhatsAppWidget'
 import ChunkErrorRecovery from '@/components/ui/ChunkErrorRecovery'
@@ -82,7 +81,6 @@ export default function RootLayout({
         <ScrollProgressBar />
 
         {/* Layout visibile */}
-        <SeasonBanner />
         <Navbar />
         <main>
           <PageTransition>

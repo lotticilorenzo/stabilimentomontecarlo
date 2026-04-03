@@ -145,19 +145,10 @@ const vibrate = (ms: number = 10) => {
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
   const [mobileOpen, setMobileOpen] = useState(false)
-  const [bannerVisible, setBannerVisible] = useState(false)
 
   const overlayRef = useRef<HTMLDivElement>(null)
   const closeButtonRef = useRef<HTMLButtonElement>(null)
   const hamburgerRef = useRef<HTMLButtonElement>(null)
-
-  // ── Banner Listener ──────────────────────────────────────────────────────
-
-  useEffect(() => {
-    const handleBanner = (e: any) => setBannerVisible(e.detail.visible)
-    window.addEventListener('seasonBannerState', handleBanner)
-    return () => window.removeEventListener('seasonBannerState', handleBanner)
-  }, [])
 
   // ── Scroll listener ──────────────────────────────────────────────────────
 
@@ -206,11 +197,6 @@ export default function Navbar() {
   const navBg = scrolled ? 'rgba(245, 237, 216, 0.92)' : 'transparent'
   const navBackdrop = scrolled ? 'blur(16px)' : 'none'
 
-  // ── Banner offset — banner height matches SeasonBanner py-2.5 + content ──
-  // When banner is visible and page is at top, slide navbar below it
-  const BANNER_HEIGHT = 40 // px
-  const navTop = bannerVisible && !scrolled ? BANNER_HEIGHT : 0
-
   // ── Animation Variants ──────────────────────────────────────────────────
 
   const transitionExpo = { duration: 0.7, ease: [0.16, 1, 0.3, 1] }
@@ -247,7 +233,7 @@ export default function Navbar() {
       <nav
         className="fixed left-0 right-0 z-50 transition-all duration-500"
         style={{
-          top: navTop,
+          top: 0,
           backgroundColor: navBg,
           backdropFilter: navBackdrop,
           height: scrolled ? '70px' : '90px',

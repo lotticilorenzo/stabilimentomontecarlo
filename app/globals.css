@@ -89,16 +89,6 @@ h3 {
   }
 }
 
-/* WhatsApp widget — mobile: above sticky call button. Desktop: normal bottom-6 */
-.whatsapp-widget {
-  /* Mobile: env(safe-area-inset-bottom) + 16px padding + 56px button + 16px gap = ~88px+safe-area */
-  bottom: calc(env(safe-area-inset-bottom) + 88px);
-}
-@media (min-width: 1024px) {
-  .whatsapp-widget {
-    bottom: 24px; /* same as Tailwind's bottom-6 */
-  }
-}
 
 /* Nav underline hover — scaleX 0→1 from left — only for hover-capable devices */
 .nav-link {

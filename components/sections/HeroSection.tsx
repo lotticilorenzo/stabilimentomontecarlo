@@ -145,8 +145,9 @@ export default function HeroSection() {
       />
 
       {/* ── Staggered text content ────────────────────────────────────── */}
+      {/* pb-24 su mobile evita che i FAB (phone + WA, ~88px dal basso) coprano i CTA */}
       <motion.div
-        className="relative z-10 flex flex-col items-center justify-center h-full text-white text-center px-6"
+        className="relative z-10 flex flex-col items-center justify-center h-full text-white text-center px-6 pb-24 md:pb-0"
         variants={containerVariants}
         initial="hidden"
         animate="visible"
