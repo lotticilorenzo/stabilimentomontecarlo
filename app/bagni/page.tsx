@@ -263,7 +263,7 @@ export default function BagniPage() {
       </section>
 
       {/* ── La Nostra Spiaggia ─────────────────────────────────────────────── */}
-      <section className="relative bg-sand py-16 md:py-16 md:py-16 md:py-20 lg:py-28">
+      <section className="relative bg-sand py-16 md:py-20 lg:py-28">
         <SectionNumber number="01" />
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
@@ -325,7 +325,7 @@ export default function BagniPage() {
 
       {/* ── Servizi — 4 col desktop, 2 mobile — ZERO PREZZI ───────────────── */}
       <section
-        className="relative py-16 md:py-16 md:py-16 md:py-20 lg:py-28"
+        className="relative py-16 md:py-20 lg:py-28"
         style={{ backgroundColor: '#EDE6D0' }}
       >
         <SectionNumber number="02" />
@@ -382,7 +382,7 @@ export default function BagniPage() {
 
       {/* ── La Stagione — timeline orizzontale ────────────────────────────── */}
       <section
-        className="relative py-16 md:py-16 md:py-16 md:py-20 lg:py-28 overflow-hidden"
+        className="relative py-16 md:py-20 lg:py-28 overflow-hidden"
         style={{ backgroundColor: '#1B4F6B' }}
       >
         <SectionNumber number="03" />

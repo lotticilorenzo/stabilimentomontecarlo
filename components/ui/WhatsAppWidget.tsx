@@ -26,7 +26,7 @@ const ArrowIcon = () => (
 
 // ─── Quick options ────────────────────────────────────────────────────────────
 
-const PHONE = '390544123456'
+const PHONE = '390544000000'
 
 const OPTIONS = [
   {

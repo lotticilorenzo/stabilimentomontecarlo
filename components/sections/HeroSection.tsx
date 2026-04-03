@@ -3,7 +3,6 @@
 import { useRef, useEffect } from 'react'
 import { motion, useScroll, useTransform } from 'framer-motion'
 import Link from 'next/link'
-import ScrollIndicator from '@/components/ui/ScrollIndicator'
 
 // ─── Stagger variants ─────────────────────────────────────────────────────────
 
@@ -145,9 +144,8 @@ export default function HeroSection() {
       />
 
       {/* ── Staggered text content ────────────────────────────────────── */}
-      {/* pb-24 su mobile evita che i FAB (phone + WA, ~88px dal basso) coprano i CTA */}
       <motion.div
-        className="relative z-10 flex flex-col items-center justify-center h-full text-white text-center px-6 pb-24 md:pb-0"
+        className="relative z-10 flex flex-col items-center justify-center h-full text-white text-center px-6"
         variants={containerVariants}
         initial="hidden"
         animate="visible"
@@ -207,11 +205,6 @@ export default function HeroSection() {
           </Link>
         </motion.div>
       </motion.div>
-
-      {/* ── Scroll indicator ──────────────────────────────────────────── */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10">
-        <ScrollIndicator color="light" />
-      </div>
 
     </section>
   )

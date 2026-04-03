@@ -120,7 +120,7 @@ function ServiceCard({ title, label, href, image, imageAlt, delay }: CardProps) 
 
 export default function ServicesGrid() {
   return (
-    <section style={{ backgroundColor: '#FAFAF8' }} className="py-16 md:py-16 md:py-16 md:py-20 lg:py-28">
+    <section style={{ backgroundColor: '#FAFAF8' }} className="py-16 md:py-20 lg:py-28">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
 
         {/* Centered header */}

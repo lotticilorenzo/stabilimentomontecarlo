@@ -27,7 +27,7 @@ function PhoneIcon() {
 export default function StickyCallButton() {
   return (
     <motion.a
-      href="tel:+390544123456"
+      href="tel:+390544000000"
       aria-label="Chiama Bagno Montecarlo"
       initial={{ opacity: 0, scale: 0.7 }}
       animate={{ opacity: 1, scale: 1 }}

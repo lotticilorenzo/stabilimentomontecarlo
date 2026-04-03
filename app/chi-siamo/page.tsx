@@ -82,7 +82,7 @@ export default function ChiSiamoPage() {
       </section>
 
       {/* Storia */}
-      <section className="bg-sand py-16 md:py-16 md:py-16 md:py-20 lg:py-28">
+      <section className="bg-sand py-16 md:py-20 lg:py-28">
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-start">
             <ScrollReveal>
@@ -137,7 +137,7 @@ export default function ChiSiamoPage() {
       </section>
 
       {/* Valori */}
-      <section className="py-16 md:py-16 md:py-16 md:py-20 lg:py-28" style={{ backgroundColor: '#1A1A18' }}>
+      <section className="py-16 md:py-20 lg:py-28" style={{ backgroundColor: '#1A1A18' }}>
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
           <ScrollReveal>
             <div className="text-center mb-20">

@@ -125,8 +125,7 @@ export default function Footer() {
                     >
                       {/* Animated dash on hover */}
                       <span
-                        className="block h-px bg-gold transition-all duration-300 origin-left"
-                        style={{ width: '0px' }}
+                        className="block h-px bg-gold w-0 group-hover:w-5 transition-all duration-300 origin-left shrink-0"
                         aria-hidden="true"
                       />
                       <span className="group-hover:translate-x-0.5 transition-transform duration-300">

@@ -95,7 +95,7 @@ export default function ContactCTA() {
             {/* Info Grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 text-left max-w-xl mx-auto mb-14 border-t border-b border-white/10 py-10">
               <InfoRow icon={<IconPin />} label="Indirizzo" value="Viale della Pace 421, Ravenna" />
-              <InfoRow icon={<IconPhone />} label="Telefono" value="+39 0544 123456" />
+              <InfoRow icon={<IconPhone />} label="Telefono" value="+39 0544 000000" />
               <InfoRow icon={<IconClock />} label="Orari" value="Ogni giorno 8:30 – 20:00" />
               <InfoRow icon={<IconMail />} label="Email" value="info@bagnomontecarlo.it" />
             </div>

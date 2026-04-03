@@ -42,13 +42,6 @@ export default function RestaurantJsonLd() {
         validThrough: '2025-09-30',
       },
     ],
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '4.9',
-      reviewCount: '312',
-      bestRating: '5',
-      worstRating: '1',
-    },
     amenityFeature: [
       { '@type': 'LocationFeatureSpecification', name: 'Beach Access', value: true },
       { '@type': 'LocationFeatureSpecification', name: 'Outdoor Seating', value: true },

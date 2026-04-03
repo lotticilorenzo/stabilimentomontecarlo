@@ -59,13 +59,19 @@ export default function CustomCursor() {
     setIsVisible(true)
     rafRef.current = requestAnimationFrame(animate)
 
+    // Cache magnetic elements — queried once on mount, refreshed every 800ms
+    // to catch dynamic DOM changes without hammering querySelectorAll on every event
+    let cachedEls: HTMLElement[] = Array.from(document.querySelectorAll<HTMLElement>(MAGNETIC_SELECTORS))
+    const refreshInterval = setInterval(() => {
+      cachedEls = Array.from(document.querySelectorAll<HTMLElement>(MAGNETIC_SELECTORS))
+    }, 800)
+
     const onMouseMove = (e: MouseEvent) => {
       let tx = e.clientX
       let ty = e.clientY
 
       // Magnetismo sui CTA
-      const ctaEls = Array.from(document.querySelectorAll<HTMLElement>(MAGNETIC_SELECTORS))
-      for (const el of ctaEls) {
+      for (const el of cachedEls) {
         const rect = el.getBoundingClientRect()
         const cx   = rect.left + rect.width  / 2
         const cy   = rect.top  + rect.height / 2
@@ -104,6 +110,7 @@ export default function CustomCursor() {
 
     return () => {
       cancelAnimationFrame(rafRef.current)
+      clearInterval(refreshInterval)
       window.removeEventListener('mousemove', onMouseMove)
       document.removeEventListener('mouseover', onOver)
       document.removeEventListener('mouseout',  onOut)

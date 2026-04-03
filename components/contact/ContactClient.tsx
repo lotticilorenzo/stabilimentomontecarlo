@@ -306,7 +306,7 @@ export default function ContactClient() {
       </section>
 
       {/* ── Info + Mappa ─────────────────────────────────────────────────────── */}
-      <section className="bg-sand py-16 md:py-16 md:py-16 md:py-20 lg:py-28 overflow-hidden">
+      <section className="bg-sand py-16 md:py-20 lg:py-28 overflow-hidden">
         <div className="max-w-[90rem] mx-auto px-0 md:px-6 lg:px-12">
           <div className="flex flex-col lg:flex-row shadow-2xl bg-white/80 border border-dark/5">
             
@@ -470,7 +470,7 @@ export default function ContactClient() {
       </section>
 
       {/* ── Form contatto full‑width ──────────────────────────────────────────── */}
-      <section style={{ backgroundColor: '#EDE6D0' }} className="py-16 md:py-16 md:py-16 md:py-20 lg:py-28">
+      <section style={{ backgroundColor: '#EDE6D0' }} className="py-16 md:py-20 lg:py-28">
         <div className="max-w-2xl mx-auto px-6 lg:px-12">
           <ScrollReveal>
             <div className="text-center mb-14">
